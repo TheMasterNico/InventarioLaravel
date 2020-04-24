@@ -31,14 +31,16 @@ input[type=number] {
         <nav class="nav nav-tabs">
             <a class="nav-link {{ request()->routeIs('home') ? 'active' : '' }}" href="/">VENDER</a>
             <a class="nav-link {{ request()->routeIs('add') ? 'active' : '' }}" href="/agregar">AGREGAR</a>
-            <a class="nav-link {{ request()->routeIs('almacenar') ? 'active' : '' }}" href="/almacenar">ALMACENAR</a>
+            <!--<a class="nav-link {{ request()->routeIs('almacenar') ? 'active' : '' }}" href="/almacenar">ALMACENAR</a>-->
             <a class="nav-link {{ request()->routeIs('search') ? 'active' : '' }}" href="/buscar">BUSCAR</a>
-            <a class="nav-link" href="#">REGISTROS</a>
+            <a class="nav-link {{ request()->routeIs('registros') ? 'active' : '' }}" href="/registros">REGISTROS</a>
         </nav>
     </div> 
     @extends('plantilla_option')
     @yield('contenido')
-
-    @yield('page-script')
+    
+    <script type="text/javascript">
+        @yield('page-script')
+    </script>
 </body>
 </html>

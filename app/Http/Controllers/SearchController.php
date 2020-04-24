@@ -23,17 +23,10 @@ class SearchController extends Controller
         $objetos = Objeto::latest()->get();
         return view('search', compact('objetos'));
     }
-
-    public function show($id)
-    {
-        $objetos = Objeto::latest()->get();
-        return view('search', compact('objetos', 'id'));
-    }
-
     public function showPost()
     {
         $nombre = request()->Nombre;
-        $objetos = Objeto::latest()->get();
+        $objetos = Objeto::latest()->paginate( 5 );
         return view('search', compact('objetos', 'nombre'));
     }
 }

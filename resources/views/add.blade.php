@@ -55,31 +55,29 @@
     <!-- Formulario de agregar -->
     
     @isset($campos)
-    <div class="modal fade" id="addSuccefull" tabindex="-1" role="dialog" aria-labelledby="addSuccefullLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="addSuccefullLabel">Objeto guardado/h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    Se ha agregado con exito el objeto {{$campos['Nombre']}} con un valor de {{$campos['Precio']}}
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+    <div id="app">
+        <div class="modal fade" id="addSuccefull" tabindex="-1" role="dialog" aria-labelledby="addSuccefullLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="addSuccefullLabel">Objeto guardado/h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Se ha agregado con exito el objeto {{$campos['Nombre']}} con un valor de {{$campos['Precio']}}
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    @section('page-script')
-    <script type="text/javascript">
-        <alert>
-            Se ha agregado con exito el objeto {{$campos['Nombre']}} con un valor de {{$campos['Precio']}}
-        </alert>
-    </script>
-    @endsection
+    </div>s
+        @section('page-script')
+            alert('Se ha agregado con exito el objeto {{$campos['Nombre']}} con un valor de {{$campos['Precio']}}');
+        @endsection
     @endisset
 </div>
 
